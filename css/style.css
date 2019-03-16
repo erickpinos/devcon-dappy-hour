@@ -1,0 +1,130 @@
+html, body {
+	margin: 0 auto;
+	padding: 0 auto;
+	font-family: Quicksand, sans-serif;
+	color: #000;
+/*	background: #FF6C61; */
+	background: #A3A4A8;
+}
+
+p { margin: 0; padding: 4px; }
+
+div {	margin: 0; padding: 0;}
+
+#chartContainer {
+	margin: 0px;
+    border-color: #E7E7E7;
+    padding: 10px 0px 0px 0px;
+	box-shadow: 0 10px 10px 0 rgba(0,0,0,0.5);
+	width:90%!important;
+}
+
+#pending-container {
+	color: #000;
+	font-size:20px;
+	font-weight: 800;
+	display: block;
+}
+
+#total-donations-container {
+	text-align: center;
+	font-size:60px;
+	font-weight:800;
+}
+
+#total-donations {
+	display: inline;
+	font-size:100px;
+}
+
+#pending-heart {
+  height: 100px;
+}
+
+.pay-button {
+	width: 152px;
+	height: 44.5px;
+	background-size: 100%;
+	background-image: url('https://metamask.github.io/TipButton/images/1_pay_mm_off.png');
+	cursor: pointer;
+	display: inline;
+	padding-bottom: 8px;
+}
+
+#wrapper {
+	top: 15%;
+	width:1200px;
+	height:680px;
+	margin: 0 auto;
+}
+
+/* Header start */
+#header {
+	text-align: center;
+	margin: 0 0 30px 0;
+	padding: 15px 0 0px 0;
+}
+
+#txt-title {
+	color: #000;
+	font-size: 30px;
+	text-align:center;
+    padding: 30px 0px 10px 0px;
+	text-shadow: 0 -1px 2px rgba(255,255,255,.5);
+	font-weight: 800;
+}
+
+#txt-header {
+	color: #000;
+	font-size: 60px;
+	text-align:center;
+	text-shadow: 0 -1px 2px rgba(255,255,255,.5);
+	font-weight: 800;
+}
+
+#txt-sub-header {
+	color: #000;
+	font-size: 38px;
+	text-align:center;
+	text-shadow: 0 -1px 2px rgba(255,255,255,.5);
+	font-weight: 800;
+}
+
+#txt-subtitle {
+	font-size: 17px;
+	text-align: center;
+}
+
+#table_title {
+	    color: black;
+}
+
+#last-donation-container {
+    text-align: center;
+    padding: 0px 0px 10px 0px;
+    font-size: 40px;
+	font-weight:800;
+}
+
+#dai-image {
+	display: inline;
+	height: 100px;
+}
+
+#ben-image {
+	display: inline;
+	height: 70px;
+}
+#header-image {
+	text-align:center;
+	height: 300px;
+}
+
+#text{
+	display:inline;
+}
+
+#text-students{
+	font-size:40px;
+	text-align:center;
+}

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+	<meta charset="UTF-8">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="js/index.js"></script>
+	<script src="js/canvasjs.min.js"></script>
+	<link rel="stylesheet" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+	<title>Crypto Wishing Well</title>
+</head>
+
+<body>
+
+	<div id="wrapper">
+	<div id="header">
+	</div>
+	<div id="total-donations-container">
+		<div id="total-donations"></div><img id="dai-image" src="images/dai.png"><p> <div id="text">Donated to  </div><img id="ben-image" src="images/ben-full-logo.png"></p>
+	</div>
+
+	<div id="text-students"><p>100 DAI = 1 BEN student travel voucher</p>
+	<div id="text-students"><p>Donate at the bar. Min 1 DAI</p>
+<br>
+	<p>The Dai Dappy Hour!</p></div>
+	<div id="txt-sub-header">#cryptolife Prague Edition</div>
+	<div id="header-image"><img src="images/dappy-hour-ship.png"></div>
+	<p id="txt-title">Crypto Wishing Well</p>
+
+<!--	<div id="last-donation-container">
+		<div>Last Donation By:</div>
+		<div id="last-donor-name"></div>
+	</div>
+-->
+
+
+<!--		<center>
+			<div id="chartContainer" style="width: 100%; height: 300px"></div>
+		</center>-->
+
+	<!--
+	<div id="leaderboard">
+		<table>
+			<tr>
+				<th id="rank_1">Address</th><th>Amount</th>
+			</tr>
+			<tr>
+				<th>Address</th><th>Amount</th>
+			</tr>
+			<tr>
+				<th>Address</th><th>Amount</th>
+			</tr>
+		</table>
+	</div>
+	</div>
+	-->
+	
+<!--	<table style="width:100%" id="table_title">
+		<tr>
+    		<th style="width:25%">Water.org</th>
+		</tr>
+		<tr>
+			<th><img src="images/address1_qrcode.png" alt="Address 1" height="100" width="100"></th>
+		</tr>
+		<tr>
+  			<th><input style="line-height: 20px; font-size: 20px; padding-bottom:-5px;" type="number" id="amount1" min="0.01" max="10" step="0.05" placeholder="0.05"></th>
+		</tr>
+		<tr>
+			<th><button class="pay-button" id = "pay-button2" onclick="donate1()"></button></th>
+		</tr>
+	</table>    
+	<br>
+-->
+<!--	<a href="ethform.html">Charity Template</a>
+	<br>
+	<a href="fountainsdemo.html">Fountains Demo</a>
+	<br>
+-->
+</body>
+
+<script>
+	var address1 = "0xc669d3A20F921713F16Bce59D4Ac0241047EC6b2";
+	var address2 = "0xf73d1b277786819f38C5a7f6e88E9e4c249Fa1C6";
+	var address3 = "0x9E8cfEe0D8578E85Ab5b48f4239830213CDa983a";
+	var address4 = "0x2ed10bDd772B53E1f6be46Fbe0998327753FE158";
+
+	var amount = null;
+
+	function donate(wallet,amountID) {
+
+	console.log(wallet);
+	console.log(amount);
+
+    	if (typeof web3 !== 'object') {
+      		alert('MetaMask not loaded, try later');
+    	return;
+		}
+
+	if (isNaN(amount) || amountID < 0) {
+    	alert('Please, enter valid donation size!');
+    	return;
+	}
+	
+	const web4 = new Web3(web3.currentProvider);
+//	const amount = parseFloat(document.getElementById(amount).value);
+    
+	if (!web4.eth.accounts[0]) {
+    	alert('Please, login to MetaMask first');
+    return;
+	}
+    
+// 	const donationWallet = document.getElementById(wallet).value;
+// 	console.log(donationWallet);
+ 	
+ 	const transactionObject = {
+		from: web4.eth.accounts[0],
+    	to: wallet,
+    	value: web4.toWei(amount),
+	}
+
+	console.log(transactionObject);
+ 	web4.eth.sendTransaction(transactionObject, function(){
+    	alert('Success!');
+	})
+	}  
+
+	function donate1() {
+		amount = amount1.value;
+		donate(address1,amount);
+	}
+
+	function donate2() {
+		amount = amount2.value;
+		donate(address2,amount);
+	}
+
+	function donate3() {
+		amount = amount3.value;
+		donate(address3,amount);
+	}
+
+	function donate4() {
+		amount = amount4.value;
+		donate(address4,amount);
+	}
+
+</script>
+</html>
